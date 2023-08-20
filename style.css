@@ -1,7 +1,56 @@
 body {
   margin: 0;
+  background-color: rgb(70, 70, 70);
+}
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url(Font/RobotoRegular.ttf);
+}
+
+.basicProfile {
+  display: flex;
+}
+.profileText {
+  margin: 0px 30% 0px 2%;
+  width: 50%;
+}
+
+.logo {
+  margin: 30% 0px 0px 50%;
+  width: 50%;
+  height: auto;
+}
+
+.Name {
+  margin: 18% 0px 0px 0;
+  font-family: "RobotoRegular";
+  font-size: 5vmin;
+  color: rgb(230, 230, 230);
+  vertical-align: text-bottom;
+}
+
+.job {
+  margin: 0px 0px 0px 0;
+  font-size: 2vmin;
+  color: rgb(192, 192, 192);
 }
 
 .nickName {
+  width: 50%;
+  font-size: 3vmin;
   text-align: center;
+  margin-top: 4%;
+  margin-left: 50%;
+  font-family: "RobotoRegular";
+  color: rgb(230, 230, 230);
+}
+
+.description {
+  margin-left: 4%;
+  padding: 2% 2% 2% 2%;
+  font-size: 2.5vmin;
+  color: rgb(192, 192, 192);
+  border: 0.2vmin solid rgb(234, 165, 165);
+  border-radius: 5px;
 }
