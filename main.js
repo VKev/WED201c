@@ -24,7 +24,7 @@ function setRandom(string, min, max, donvi, name) {
         string,
         Math.floor(Math.random() * (max - min)) + min + donvi
       );
-    });
+    }); 
   });
 }
 
