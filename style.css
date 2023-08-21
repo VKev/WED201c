@@ -55,19 +55,19 @@ body {
 }
 
 .profileText {
-  margin: 0px 30% 0px 2%;
+  margin: 0 30% 0px 2%;
   width: 50%;
   font-family: "RobotoRegular";
 }
 
 .logo {
-  margin: 30% 0px 0px 50%;
+  margin: 20% 0px 0px 50%;
   width: 50%;
   height: auto;
 }
 
 .Name {
-  margin: 18% 0px 0px 0;
+  margin: 14% 0px 0px 0;
   font-family: "RobotoRegular";
   font-size: 5vmin;
   color: rgb(230, 230, 230);
@@ -207,7 +207,7 @@ body {
   margin-top: 0;
   font-family: "RobotoRegular";
   color:  rgb(216, 216, 214);
-  font-size: 4vmin;
+  font-size: 2vmax;
 }
 .fa{
   margin-left: 3%;
@@ -238,36 +238,45 @@ body {
     color: rgb(199, 39, 39) ;
   }
 }
-.socialMedia div{
+.facebooktext{
   display: flex;
+  
 }
 .facebooktext a{
   display: flex;
   text-decoration: none;
 }
 .facebooktext p{
-  width: 40vmax;
+  
   margin-left: 1vmax;
   margin-bottom: 0;
-  padding: 3vmin 0 0 0;
-  font-size: 1.5vmax;
+  padding: 2vmin 0 0 0;
+  font-size: 1.2vmax;
   text-decoration: underline;
 }
 .facebooktext p:hover{
   color:rgb(220, 149, 253)
 }
+.gmailtext{
+  display: flex;
+}
 .gmailtext p{
-  width: 40vmax;
+  
   margin-left: 1vmax;
   margin-bottom: 0;
   margin-top: 2.5vmin;
-  font-size: 1.5vmax;
+  font-size: 1.2vmax;
 }
 .fa-google{
   margin-left: 5vmin;
   animation-name: colorGoogle;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+.contactText{
+  position: fixed;
+  left: 2%;
+  bottom: 4%;
 }
 .fa-facebook{
   margin-left: 5vmin;
@@ -281,9 +290,94 @@ body {
 .fa-google::before{
   font-size: 5vmin;
 }
-.gmail{
-  color:aliceblue;
+#gmail{
+  color:rgb(222, 222, 222);
   margin-left: 2%;
+  font-family:"RobotoRegular";
+}
+.skillText{
+  font-family: "RobotoRegular";
+  color:  rgb(216, 216, 214);
+  font-size: 3vmin;
+}
+.technicalTittle{
+  margin-top: 00;
+  margin-bottom: 2%;
+  font-size: 4vmin;
 }
 
+.technicalContent {
+	position: relative;
+	margin:5% 0 0 10%;
+  padding: 2% 5% 2% 5%;
+	width: 38vw;
+  border-radius:7px;
+	background: linear-gradient(0deg, #14000c, #3b0032);
+  color: #dfdfdf;
+}
 
+.technicalContent:before, .technicalContent:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+  border-radius:7px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 50s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.technicalContent:after {
+	filter: blur(1vmax);
+}
+
+.softContent{
+  border-radius:7px;
+  position: relative;
+	margin:5% 0 0 10%;
+  padding: 2% 5% 2% 5%;
+	width: 38vw;
+	background: rgba(255, 255, 255, 0.1);
+  color: #dfdfdf;
+  margin-bottom: 5vh;
+}
+.git{
+  position: fixed;
+  top: 22vh;
+  right: 10vw;
+  color: white;
+}
+
+.fa-github{
+  color:white;
+}
+.fa-github:hover{
+  color: #e5aeff;
+}
+.fa-github::before{
+  font-size: 10vmax;
+}
+
+.mygit:hover{
+  color: #e5aeff;
+}
+.mygit{
+  margin-left: 1vmin;
+  margin-top: 0;
+}
