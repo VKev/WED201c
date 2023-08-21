@@ -34,10 +34,11 @@ body {
   }
 }
 
+
 .particle {
   position: absolute;
-  --randomFloat-size;
-  --randomFloat-tx;
+  --randomFloat-size:1;
+  --randomFloat-tx:1;
   width: var(--randomFloat-size);
   height: var(--randomFloat-size);
   border-radius: 100%;
@@ -45,12 +46,14 @@ body {
   animation-delay: calc(20s/var(--i));
   animation-duration: calc(200s/var(--i));
   background-color: rgba(0,0,0,0);
+  animation-play-state:running;
 }
 
 
 .basicProfile {
   display: flex;
 }
+
 .profileText {
   margin: 0px 30% 0px 2%;
   width: 50%;
@@ -96,6 +99,15 @@ body {
   border: 0.2vmin solid rgb(234, 165, 165);
   border-radius: 5px;
 }
+.description a{
+  color:tomato;
+}
+.description a:hover{
+  color:rgb(75, 213, 255);
+}
+.description a:active{
+  color:rgb(195, 91, 211)
+}
 
 .LanguageText p{
   margin-left: 0;
@@ -110,9 +122,168 @@ body {
   font-family: "RobotoRegular";
   color:  rgb(216, 216, 214);
   font-size: 3vmin;
-
+  margin-bottom: 0;
+}
+.mainLanguage li{
+  margin-bottom: 30%;
+}
+.mainLanguage ul{
+  margin-bottom: 1%;
+}
+@keyframes colorChange{
+  0%{
+    color: var(--color1) ;
+    text-shadow: 0px 0px 5px var(--color1),
+    0px 0px 0px var(--color1);
+  }
+  50%{
+    color: var(--color2);
+    text-shadow: 0px 0px 10px var(--color2),
+    0px 0px 20px var(--color2),
+    0px 0px 1px var(--color2);
+  }
+  100%{
+    color: var(--color1);
+    text-shadow: 0px 0px 5px var(--color1),
+    0px 0px 0px var(--color1);
+  }
 }
 
-.mainLanguage ul{
+#cs{
+  --color1:rgb(105, 195, 99);
+  --color2:rgb(119, 239, 110);
+  
+  animation-name: colorChange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   
 }
+#cpp{
+  --color1:rgb(231, 77, 138);
+  --color2:rgb(249, 114, 168);
+  animation-name: colorChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+#java{
+  --color1:rgb(167, 73, 73);
+  --color2:rgb(212, 93, 93);
+  animation-name: colorChange;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+#c{
+  --color1:rgb(174, 174, 174);
+  --color2:rgb(228, 228, 228);
+  animation-name: colorChange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#html{
+  --color1:rgb(200, 123, 71);
+  --color2:rgb(255, 165, 105);
+  animation-name: colorChange;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+#css{
+  --color1:rgb(148, 101, 193);
+  --color2:rgb(185, 131, 236);
+  animation-name: colorChange;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+#hlsl{
+  --color1:rgb(89, 198, 162);
+  --color2:rgb(113, 239, 197);
+  animation-name: colorChange;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+
+.contactText p{
+  margin-left: 0;
+  margin-bottom: 2%;
+  margin-top: 0;
+  font-family: "RobotoRegular";
+  color:  rgb(216, 216, 214);
+  font-size: 4vmin;
+}
+.fa{
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+.fa-facebook {
+  
+  color: rgb(43, 109, 195);
+}
+
+@keyframes colorGoogle{
+  0%{
+    color: rgb(199, 39, 39) ;
+
+  }
+  25%{
+    color: rgb(237, 205, 80);
+
+  }
+  50%{
+    color: rgb(3, 169, 0);
+  }
+  75%{
+    color: rgb(21, 124, 234);
+  }
+  100%{
+    color: rgb(199, 39, 39) ;
+  }
+}
+.socialMedia div{
+  display: flex;
+}
+.facebooktext a{
+  display: flex;
+  text-decoration: none;
+}
+.facebooktext p{
+  width: 40vmax;
+  margin-left: 1vmax;
+  margin-bottom: 0;
+  padding: 3vmin 0 0 0;
+  font-size: 1.5vmax;
+  text-decoration: underline;
+}
+.facebooktext p:hover{
+  color:rgb(220, 149, 253)
+}
+.gmailtext p{
+  width: 40vmax;
+  margin-left: 1vmax;
+  margin-bottom: 0;
+  margin-top: 2.5vmin;
+  font-size: 1.5vmax;
+}
+.fa-google{
+  margin-left: 5vmin;
+  animation-name: colorGoogle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.fa-facebook{
+  margin-left: 5vmin;
+}
+.fa-facebook:hover{
+  color: rgb(201, 0, 208);
+}
+.fa-facebook::before{
+  font-size: 5vmin;
+}
+.fa-google::before{
+  font-size: 5vmin;
+}
+.gmail{
+  color:aliceblue;
+  margin-left: 2%;
+}
+
+
