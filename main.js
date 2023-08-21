@@ -1,4 +1,3 @@
-
 //var particles = document.querySelectorAll(".particle");
 
 //var root = document.querySelector(".particle");
@@ -9,21 +8,25 @@
 //        root.style.setProperty('--randomFloat1', random);
 //        console.log(random);
 //    });
-//    
+//
 //});
 
+function setRandom(string, min, max, donvi, name) {
+  var particles = document.querySelectorAll(name);
+  particles.forEach((par) => {
+    par.style.setProperty(
+      string,
+      Math.floor(Math.random() * (max - min)) + min + donvi
+    );
 
-function setRandom(string,min, max, donvi, name){
-    var particles = document.querySelectorAll(name);
-    particles.forEach(par => {
-        par.style.setProperty(string,  Math.floor(Math.random() *(max-min))+min +donvi);
-
-        par.addEventListener("animationiteration", () => {
-            par.style.setProperty(string, Math.floor(Math.random() *(max-min))+min +donvi);
-        });
+    par.addEventListener("animationiteration", () => {
+      par.style.setProperty(
+        string,
+        Math.floor(Math.random() * (max - min)) + min + donvi
+      );
     });
+  });
 }
 
-
-setRandom('--randomFloat-tx',10,90,'vw',".particle");
-setRandom('--randomFloat-size',7,17,'vh',".particle");
+setRandom("--randomFloat-tx", 10, 90, "vw", ".particle");
+setRandom("--randomFloat-size", 7, 17, "vh", ".particle");
