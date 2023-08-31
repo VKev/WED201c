@@ -213,7 +213,29 @@ body {
   margin-left: 3%;
   margin-top: 2%;
 }
+.fa-youtube{
+  color:red;
 
+}
+.fa-youtube::before{
+  font-size: 5vmin;
+}
+
+.youtubeText{
+  margin-left: 10%;
+}
+.youtubeText a{
+  display: flex;
+}
+.youtubeText p:hover{
+  color: rgb(192, 11, 11);
+}
+.youtubeText p{
+  margin-top: 5%;
+  margin-left: 2%;
+  font-size: 2.5vmin;
+  text-decoration: underline;
+}
 .fa-facebook {
   
   color: rgb(43, 109, 195);
