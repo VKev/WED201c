@@ -1,406 +1,221 @@
+/* GENERAL */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0;
-  background-color: rgb(70, 70, 70);
+    font-family: 'Poppins', sans-serif;
 }
 
-@font-face {
-  font-family: RobotoRegular;
-  src: url(Font/RobotoRegular.ttf);
+html {
+    scroll-behavior: smooth;
 }
 
-.Anim {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  height: 10px;
-  
-}
-
-@keyframes bubbleBackground {
-  0% {
-    background: rgba(255, 255, 255, 0);
-    transform: translate(var(--randomFloat-tx),100vh);
-    
-  }
-  30%{
-    background: rgba(255, 255, 255, 0.05);
-  }
-  99% {
-    
-    background: rgba(255, 255, 255, 0);
-    transform: translate(var(--randomFloat-tx),0vh);
-  }
+p {
+    color: rgb(85,85,85);
 }
 
 
-.particle {
-  position: absolute;
-  --randomFloat-size:1;
-  --randomFloat-tx:1;
-  width: var(--randomFloat-size);
-  height: var(--randomFloat-size);
-  border-radius: 100%;
-  animation: bubbleBackground 15s linear infinite;
-  animation-delay: calc(20s/var(--i));
-  animation-duration: calc(200s/var(--i));
-  background-color: rgba(0,0,0,0);
-  animation-play-state:running;
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease
 }
 
 
-.basicProfile {
-  display: flex;
+/* DESKTOP */
+
+nav,
+.nav-links {
+     display: flex;
 }
 
-.profileText {
-  margin: 0 30% 0px 2%;
-  width: 50%;
-  font-family: "RobotoRegular";
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+a:hover{
+    color:grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
 }
 
 .logo {
-  margin: 20% 0px 0px 50%;
-  width: 50%;
-  height: auto;
+    font-size: 1.5rem;
 }
 
-.Name {
-  margin: 14% 0px 0px 0;
-  font-family: "RobotoRegular";
-  font-size: 5vmin;
-  color: rgb(230, 230, 230);
-  vertical-align: text-bottom;
+.logo:hover{
+    cursor: default;
 }
 
-.job {
-  margin: 0px 0px 0px 0;
-  font-size: 2vmin;
-  color: rgb(192, 192, 192);
+/* HAMBERGER MENU */
+
+#hamburger-nav{
+    display: none;
 }
 
-.nickName {
-  width: 50%;
-  font-size: 3vmin;
-  text-align: center;
-  margin-top: 4%;
-  margin-left: 50%;
-  font-family: "RobotoRegular";
-  color: rgb(230, 230, 230);
+.hamburger-menu{
+    position:relative;
+    display: inline-block;
 }
 
-.description {
-  margin-left: 4%;
-  margin-bottom: 0;
-  padding: 2% 2% 2% 2%;
-  font-size: 2.5vmin;
-  color: rgb(192, 192, 192);
-  border: 0.2vmin solid rgb(234, 165, 165);
-  border-radius: 5px;
-}
-.description a{
-  color:tomato;
-}
-.description a:hover{
-  color:rgb(75, 213, 255);
-}
-.description a:active{
-  color:rgb(195, 91, 211)
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width : 30px;
+    cursor: pointer;
 }
 
-.LanguageText p{
-  margin-left: 0;
-  margin-bottom: 0;
-  font-family: "RobotoRegular";
-  color:  rgb(216, 216, 214);;
-  font-size: 4vmin;
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
 }
 
-.mainLanguage{
+.menu-links{
+    position: absolute;
+    top:100%;
+    right:0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration:none;
+    transition:  all 0.3 ease-in-out;;
+}
+
+.menu-links li {
+    list-style: none;
+
+}
+
+.menu-links.open{
+    max-height: 300px ;
+
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTION */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height:  fit-content;
+
+}
+
+.section-container{
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
   display: flex;
-  font-family: "RobotoRegular";
-  color:  rgb(216, 216, 214);
-  font-size: 3vmin;
-  margin-bottom: 0;
-}
-.mainLanguage li{
-  margin-bottom: 30%;
-}
-.mainLanguage ul{
-  margin-bottom: 1%;
-}
-@keyframes colorChange{
-  0%{
-    color: var(--color1) ;
-    text-shadow: 0px 0px 5px var(--color1),
-    0px 0px 0px var(--color1);
-  }
-  50%{
-    color: var(--color2);
-    text-shadow: 0px 0px 10px var(--color2),
-    0px 0px 20px var(--color2),
-    0px 0px 1px var(--color2);
-  }
-  100%{
-    color: var(--color1);
-    text-shadow: 0px 0px 5px var(--color1),
-    0px 0px 0px var(--color1);
-  }
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
 }
 
-#cs{
-  --color1:rgb(105, 195, 99);
-  --color2:rgb(119, 239, 110);
-  
-  animation-name: colorChange;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  
-}
-#cpp{
-  --color1:rgb(231, 77, 138);
-  --color2:rgb(249, 114, 168);
-  animation-name: colorChange;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-#java{
-  --color1:rgb(167, 73, 73);
-  --color2:rgb(212, 93, 93);
-  animation-name: colorChange;
-  animation-duration: 3.5s;
-  animation-iteration-count: infinite;
-}
-#c{
-  --color1:rgb(174, 174, 174);
-  --color2:rgb(228, 228, 228);
-  animation-name: colorChange;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-#html{
-  --color1:rgb(200, 123, 71);
-  --color2:rgb(255, 165, 105);
-  animation-name: colorChange;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-#css{
-  --color1:rgb(148, 101, 193);
-  --color2:rgb(185, 131, 236);
-  animation-name: colorChange;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-}
-#hlsl{
-  --color1:rgb(89, 198, 162);
-  --color2:rgb(113, 239, 197);
-  animation-name: colorChange;
-  animation-duration: 3.5s;
-  animation-iteration-count: infinite;
-}
-
-.contactText p{
-  margin-left: 0;
-  margin-bottom: 2%;
-  margin-top: 0;
-  font-family: "RobotoRegular";
-  color:  rgb(216, 216, 214);
-  font-size: 2vmax;
-}
-.fa{
-  margin-left: 3%;
-  margin-top: 2%;
-}
-.fa-youtube{
-  color:red;
-
-}
-.fa-youtube::before{
-  font-size: 5vmin;
-}
-
-.youtubeText{
-  margin-left: 10%;
-}
-.youtubeText a{
+.section__pic-container {
   display: flex;
+  height: 250px;
+  width: 250px;
+  margin: auto 0;
 }
-.youtubeText p:hover{
-  color: rgb(192, 11, 11);
+.section__text{
+    align-self: center;
+    text-align: center;
 }
-.youtubeText p{
-  margin-top: 5%;
-  margin-left: 2%;
-  font-size: 2.5vmin;
-  text-decoration: underline;
+
+.section__text p {
+    font-weight: 600;
 }
-.fa-facebook {
   
-  color: rgb(43, 109, 195);
+.section__text__p1 {
+    text-align: center;
 }
-
-@keyframes colorGoogle{
-  0%{
-    color: rgb(199, 39, 39) ;
-
-  }
-  25%{
-    color: rgb(237, 205, 80);
-
-  }
-  50%{
-    color: rgb(3, 169, 0);
-  }
-  75%{
-    color: rgb(21, 124, 234);
-  }
-  100%{
-    color: rgb(199, 39, 39) ;
-  }
-}
-.facebooktext{
-  display: flex;
   
+.section__text__p2 {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
 }
-.facebooktext a{
-  display: flex;
-  text-decoration: none;
+
+.section__text__p3 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
 }
-.facebooktext p{
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+  }
   
-  margin-left: 1vmax;
-  margin-bottom: 0;
-  padding: 2vmin 0 0 0;
-  font-size: 1.2vmax;
-  text-decoration: underline;
-}
-.facebooktext p:hover{
-  color:rgb(220, 149, 253)
-}
-.gmailtext{
-  display: flex;
-}
-.gmailtext p{
-  
-  margin-left: 1vmax;
-  margin-bottom: 0;
-  margin-top: 2.5vmin;
-  font-size: 1.2vmax;
-}
-.fa-google{
-  margin-left: 5vmin;
-  animation-name: colorGoogle;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.contactText{
-  position: fixed;
-  left: 2%;
-  bottom: 4%;
-}
-.fa-facebook{
-  margin-left: 5vmin;
-}
-.fa-facebook:hover{
-  color: rgb(201, 0, 208);
-}
-.fa-facebook::before{
-  font-size: 5vmin;
-}
-.fa-google::before{
-  font-size: 5vmin;
-}
-#gmail{
-  color:rgb(222, 222, 222);
-  margin-left: 2%;
-  font-family:"RobotoRegular";
-}
-.skillText{
-  font-family: "RobotoRegular";
-  color:  rgb(216, 216, 214);
-  font-size: 3vmin;
-}
-.technicalTittle{
-  margin-top: 00;
-  margin-bottom: 2%;
-  font-size: 4vmin;
+  #socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  /* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
 }
 
-.technicalContent {
-	position: relative;
-	margin:5% 0 0 10%;
-  padding: 2% 5% 2% 5%;
-	width: 38vw;
-  border-radius:7px;
-	background: linear-gradient(0deg, #14000c, #3b0032);
-  color: #dfdfdf;
-}
-
-.technicalContent:before, .technicalContent:after {
-	content: '';
-	position: absolute;
-	left: -2px;
-	top: -2px;
-  border-radius:7px;
-	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-		#0000ff, #00ff00,#ffff00, #ff0000);
-	background-size: 400%;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	z-index: -1;
-	animation: steam 50s linear infinite;
-}
-
-@keyframes steam {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 400% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
-}
-
-.technicalContent:after {
-	filter: blur(1vmax);
-}
-
-.softContent{
-  border-radius:7px;
-  position: relative;
-	margin:5% 0 0 10%;
-  padding: 2% 5% 2% 5%;
-	width: 38vw;
-	background: rgba(255, 255, 255, 0.1);
-  color: #dfdfdf;
-  margin-bottom: 5vh;
-}
-.git{
-  position: fixed;
-  top: 22vh;
-  right: 10vw;
-  color: white;
-}
-
-.fa-github{
-  color:white;
-}
-.fa-github:hover{
-  color: #e5aeff;
-}
-.fa-github::before{
-  font-size: 10vmax;
-}
-
-.mygit:hover{
-  color: #e5aeff;
-}
-.mygit{
-  margin-left: 1vmin;
-  margin-top: 0; 
-  text-align: center;
-}
+/* EXPERIENCE */
