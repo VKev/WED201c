@@ -219,3 +219,42 @@ section {
 }
 
 /* EXPERIENCE */
+.Anim {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 10px;
+    
+  }
+  
+  @keyframes bubbleBackground {
+    0% {
+      background: rgba(0, 0, 0, 0);
+      transform: translate(var(--randomFloat-tx),100vh);
+      
+    }
+    30%{
+      background: rgba(0, 0, 0, 0.05);
+    }
+    99% {
+      
+      background: rgba(0, 0, 0, 0);
+      transform: translate(var(--randomFloat-tx),0vh);
+    }
+  }
+  
+  
+  .particle {
+    position: absolute;
+    --randomFloat-size:1;
+    --randomFloat-tx:1;
+    width: var(--randomFloat-size);
+    height: var(--randomFloat-size);
+    border-radius: 100%;
+    animation: bubbleBackground 15s linear infinite;
+    animation-delay: calc(20s/var(--i));
+    animation-duration: calc(200s/var(--i));
+    background-color: rgba(0,0,0,0);
+    animation-play-state:running;
+  }
+  
