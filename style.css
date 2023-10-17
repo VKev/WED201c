@@ -168,6 +168,7 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+  margin-top: -2vh;
 }
 
 .section__pic-container {
@@ -211,6 +212,32 @@ section {
     gap: 1rem;
   }
 
+  .discription {
+    text-align: center;
+}
+
+.experience-container{
+    margin-top: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.unity-developer div, .software-engineer div{
+    width: 10rem;
+    height: 10rem;
+    box-sizing: border-box;
+    border: 2px solid black;
+    /* text-align: center; */
+    border-radius: 10px;
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+}
+
+.unity-developer ul, .software-engineer ul{
+    padding-left: 2rem;
+}
+
   /* ICONS */
 
 .icon {
@@ -218,7 +245,7 @@ section {
     height: 2rem;
 }
 
-/* EXPERIENCE */
+/* PARTICLE ANNIMATION */
 .Anim {
     position: fixed;
     display: flex;
@@ -234,7 +261,7 @@ section {
       
     }
     30%{
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.02);  
     }
     99% {
       
@@ -257,4 +284,27 @@ section {
     background-color: rgba(0,0,0,0);
     animation-play-state:running;
   }
-  
+
+  /* PROJECT */
+
+  .steam-container{
+    margin-top: 2vh;
+    text-align: center;
+  }
+
+  .tempusia p{
+    color: rgb(81,81,81);
+  }
+
+
+  .tempusia video{
+    
+    margin-top: 1rem;
+    box-sizing: border-box;
+    border: 9px solid black;
+    border-radius: 10px;
+  }
+
+  .store-link{
+    font-weight: bold;
+  }
