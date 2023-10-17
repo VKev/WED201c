@@ -5,6 +5,14 @@ function toggleMenu(){
     icon.classList.toggle("open")
 }
 
+function toggleGmail(){
+  const gmailaddress = document.querySelector(".gmail-address");
+  gmailaddress.classList.toggle("open")
+
+  const gmail = document.querySelector(".gmail");
+  gmail.classList.toggle("open")
+}
+
 function setRandom(string, min, max, donvi, name) {
     var particles = document.querySelectorAll(name);
     particles.forEach((par) => {

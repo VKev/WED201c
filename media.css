@@ -5,4 +5,40 @@
     #hamburger-nav{
         display: flex;
     }
+
+    .section-container{
+        display: block;
+    }
+    #profile {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section__pic-container{
+        padding-left: 0;
+        display: block;
+        margin-bottom: 20vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #about{
+        display: block;
+        margin-top: 40vh;
+    }
+    .software-engineer{
+        margin-left: 2rem;
+    }
+    #project{
+        margin-top: 20vh;
+    }
+    .tempusia video{
+        width: 350px;
+        height: 204.6px;
+        margin-top: 0.9rem;
+        box-sizing: border-box;
+        border: 9px solid black;
+        border-radius: 10px;
+      }
 }
