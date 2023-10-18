@@ -37,7 +37,6 @@ function upArrow(){
 
 function downArrow(){
   var stringindex = currentPage.indexOf(page[0]);
-  
   var elementindex;
   for( elementindex=0 ; elementindex<page.length; elementindex++ ){
     stringindex = currentPage.indexOf(page[elementindex]);
@@ -48,8 +47,7 @@ function downArrow(){
   if(stringindex != -1 && elementindex<page.length-1){
     newpage = currentPage.replace(page[elementindex], page[elementindex+1]);
     location.href= newpage;
-  }else{
-    newpage = currentPage.concat("/");
+  }else if(stringindex == -1){
     newpage = newpage.concat(page[1]);
     location.href= newpage;
   }
