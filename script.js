@@ -11,6 +11,20 @@ function toggleGmail(){
 
   const gmail = document.querySelector(".gmail");
   gmail.classList.toggle("open")
+
+  const underline = document.querySelector(".gmail-underline");
+  underline.classList.toggle("open")
+}
+
+function toggleFacebook(){
+  const gmailaddress = document.querySelector(".facebook-address");
+  gmailaddress.classList.toggle("open")
+
+  const gmail = document.querySelector(".facebook");
+  gmail.classList.toggle("open")
+
+  const underline = document.querySelector(".facebook-underline");
+  underline.classList.toggle("open")
 }
 
 function setRandom(string, min, max, donvi, name) {

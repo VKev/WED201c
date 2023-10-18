@@ -44,7 +44,7 @@ nav {
 .nav-links {
     gap: 2rem;
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 a {
@@ -61,7 +61,8 @@ a:hover{
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .logo:hover{
@@ -168,13 +169,12 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-  margin-top: -2vh;
 }
 
 .section__pic-container {
   display: flex;
-  height: 250px;
-  width: 250px;
+  height: 400x;
+  width: 400px;
   margin: auto 0;
 }
 .section__text{
@@ -213,36 +213,55 @@ section {
   }
 
   .discription {
+    margin-top: 5vh;
     text-align: center;
 }
 
 .experience-container{
-    margin-top: 7vh;
+    margin-top: 6vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+.software-engineer{
+    margin-left: -10rem;
+}
+.unity-developer, .software-engineer{
+    text-align: center;
+}
 .unity-developer div, .software-engineer div{
     width: 10rem;
     height: 10rem;
     box-sizing: border-box;
     border: 2px solid black;
-    /* text-align: center; */
+    width: 15rem;
     border-radius: 10px;
     padding-top: 2rem;
     margin-top: 1.5rem;
+    text-align: left;
 }
 
 .unity-developer ul, .software-engineer ul{
-    padding-left: 2rem;
+    padding-left: 3rem;
+}
+
+.languages{
+    display: flex;
+    justify-content: center;
+}
+
+.languages ul{
+    margin-top: 1rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
 
   /* ICONS */
 
 .icon {
     cursor: pointer;
-    height: 2rem;
+    height: 3rem;
 }
 
 /* PARTICLE ANNIMATION */
@@ -286,9 +305,13 @@ section {
   }
 
   /* PROJECT */
+  #project{
+    margin-top: 13vh;
+  }
+
 
   .steam-container{
-    margin-top: 2vh;
+    margin-top: 7vh;
     text-align: center;
   }
 
@@ -299,53 +322,144 @@ section {
 
   .tempusia video{
     
-    margin-top: 0.9rem;
+    margin-top: 2rem;
     box-sizing: border-box;
     border: 9px solid black;
     border-radius: 10px;
   }
 
   .store-link{
+    margin-top: 1.3rem;
     font-weight: bold;
   }
 
 
   /* CONTACT */
 
-  .contact-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-  }
+  
   .contact-header{
     margin-top: 5rem;
   }
 
   #contact{
+    margin-top: 10vh;
     text-align: center;
   }
 
-  .icon2, .gmail {
+  .icon2, .gmail, .facebook {
     cursor: pointer;
-    height: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    height: 3rem;
 }
 
-.gmail.open{
-    padding-left: 0;
-}
+.gmail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    height: 3rem;
+  }
+
 
 .gmail-address.open{
-    
+    color: black;
     display: block;
     
 }
 
 .gmail-address{
+    
     display: none;
-    margin-top: 0.5rem;
-    margin-left: -4rem;
+    color: white;
+    margin-top: .75rem;
+    
+    margin-left: 0rem;
+}
+.gmail{
+    transform: -5rem;
+}
+
+.gmail-underline.open{
+    translate: -0.8rem;
+}
+
+.gmail-underline:hover{
+    transition: all 200ms ease-in-out;
     
     
+    border-bottom:3px solid rgb(181,181,181);
+    
+}
+
+.facebook-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    height: 3rem;
+  }
+
+
+.facebook-address.open{
+    color: black;
+    display: block;
+    
+}
+
+.facebook-address{
+    
+    display: none;
+    color: white;
+    margin-top: .75rem;
+    
+    margin-left: 0rem;
+}
+.facebook-address:hover{
+    color:rgb(181,181,181);
+}
+.facebook{
+    transform: -5rem;
+}
+
+.facebook-underline.open{
+    translate: -0.8rem;
+}
+
+.facebook-underline:hover{
+    transition: all 200ms ease-in-out;
+    
+    
+    border-bottom:3px solid rgb(181,181,181);
+     ;
+}
+
+.facebook-underline{
+    height: 3.2rem;
+}
+#about{
+    padding-top: 2vh;
+    margin-top: -8vh;
+}
+
+/* ARROW */
+
+#arrow-container{
+    position: fixed;
+
+}
+
+.down-arrow{
+    position: fixed;
+    width: 2rem;
+    translate: 95vw 90vh;
+    rotate: 90deg;
+}
+
+.up-arrow{
+    position: fixed;
+    width: 2rem;
+    translate: 95vw 80vh;
+    rotate: -90deg;
+}
+
+.icon-arrow {
+    cursor: pointer;
+    height: 2rem;
 }

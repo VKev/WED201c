@@ -9,6 +9,15 @@
 </head>
 
 <body>
+  <div id="arrow-container">
+    <div class="up-arrow">
+      <img src="Image/doubleArrow.png" alt="Vkev logo" class="icon-arrow">
+    </div>
+    <div class="down-arrow">
+      <img src="Image/doubleArrow.png" alt="Vkev logo" class="icon-arrow">
+    </div>
+  </div>
+
   <div class="Anim">
     <span class="particle" style="--i:5"></span>
     <span class="particle" style="--i:10"></span>
@@ -80,7 +89,7 @@
   </section>
 
   <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
+    <p class="section__text__p1" style="margin-top: 4rem;">Get To Know More</p>
     <h1 class="title">About Me</h1>
     <p class="discription">
       I am a developer from Vietnam, born in 2004. 
@@ -88,6 +97,28 @@
       Of course, I love making games. 
       Especially puzzle games or soul-like games. 
     </p>
+    <h4 style="text-align: center; margin-top: 2rem;">LANGUAGES</h4>
+    <div class="languages">
+
+      <ul >
+        <li>C#</li>
+        <li>CG/HLSL</li>
+        <li>JAVA</li>
+      </ul>
+
+      <ul >
+        <li>GLSL</li>
+        <li>C++</li>
+        <li>SHADERLAB</li>
+      </ul>
+
+      <ul >
+        <li>JS</li>
+        <li>CSS</li>
+        <li>HTML</li>
+      </ul>
+      
+    </div>
     <div class="experience-container">
       <div class="unity-developer">
         <h3>Unity Developer</h3>
@@ -117,7 +148,7 @@
 
   <section id="project">
     <p class="section__text__p1">Take A Look At</p>
-    <h1 class="title">My Project</h1>
+    <h1 class="title">My Projects</h1>
     <div class="steam-container">
 
       <div class="tempusia">
@@ -125,29 +156,45 @@
         <p>A super hard puzzle game </br>
           with time rewinding mechanic
         </p>
-        <div>
-          <a class="store-link" href="https://store.steampowered.com/app/2054730/Tempusia/">Play now for free</a>
-        </div>
-          <video  width="349.5" height="204.5" controls >
+        
+          <video  width="625" height="359.6" controls >
             <source src="Video/tempusia.webm" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        
+          <div class="store-link">
+            <a href="https://store.steampowered.com/app/2054730/Tempusia/">Play now for free</a>
+          </div>
       </div>
 
     </div>
   </section>
 
   <section id="contact"> 
+
     <div class="contact-header">
       <p class="section__text__p1">Looking For Collab?</p>
       <h1 class="title">Contact Me</h1>
     </div>
-    <div class="contact-container">
-        <img src="Image/gmail.png" alt="My gmail" class="gmail" onclick="toggleGmail()">
-        <p class="gmail-address">HuynhKhang7452@gmail.com </p>
+    
+    <div class="gmail-container">
+        
+          <a class="gmail-underline">
+            <img src="Image/gmail.png" alt="My gmail" class="gmail" onclick="toggleGmail()">
+          </a>
+        
+        <p class="gmail-address">Huynhkhang7452@gmail.com </p>
         
     </div>
+
+    <div class="facebook-container">
+        
+      <a class="facebook-underline">
+        <img src="Image/facebook.png" alt="My facebook" class="facebook" onclick="toggleFacebook()">
+      </a>
+    
+    <a href="https://www.facebook.com/profile.php?id=100087106733569" class="facebook-address">Khang Huỳnh</a>
+    
+</div>
   </section>
   <script src="script.js"></script>
 </body>
