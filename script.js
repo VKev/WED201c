@@ -48,7 +48,7 @@ function downArrow(){
     var newpage = currentPage.replace(page[elementindex], page[elementindex+1]);
     location.href= newpage;
   }else if(stringindex == -1){
-    var newpage = newpage.concat(page[1]);
+    var newpage = currentPage.concat(page[1]);
     location.href= newpage;
   }
 }
