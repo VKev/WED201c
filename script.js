@@ -45,10 +45,10 @@ function downArrow(){
     }
   }
   if(stringindex != -1 && elementindex<page.length-1){
-    newpage = currentPage.replace(page[elementindex], page[elementindex+1]);
+    var newpage = currentPage.replace(page[elementindex], page[elementindex+1]);
     location.href= newpage;
   }else if(stringindex == -1){
-    newpage = newpage.concat(page[1]);
+    var newpage = newpage.concat(page[1]);
     location.href= newpage;
   }
 }
