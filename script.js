@@ -30,8 +30,7 @@ function upArrow(){
     }
   }
   if(stringindex != -1 && elementindex>0){
-    var newpage = currentPage.replace(page[elementindex], page[elementindex-1]);
-    location.href= newpage;
+    location.href= page[elementindex-1];
   }
 }
 
@@ -45,11 +44,9 @@ function downArrow(){
     }
   }
   if(stringindex != -1 && elementindex<page.length-1){
-    var newpage = currentPage.replace(page[elementindex], page[elementindex+1]);
-    location.href= newpage;
+    location.href= page[elementindex+1];
   }else if(stringindex == -1){
-    var newpage = currentPage.concat(page[1]);
-    location.href= newpage;
+    location.href= page[1];
   }
 }
 
